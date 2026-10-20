@@ -2,6 +2,8 @@
 
 A compact 3D browser game created for the Vi3W Game Developer application. The hover racer was sketched, generated, and converted to a GLB model in Vi3W, then integrated into a playable Three.js prototype.
 
+**Play online:** https://vi3w-hover-rush.glad-hen-8100.chatgpt.site
+
 ## Play
 
 - **Mouse / touch** — steer by position or drag
