@@ -33,7 +33,7 @@ const pts=[]; for(let i=0;i<900;i++) pts.push((Math.random()-.5)*150,Math.random
 
 const player = new THREE.Group(); scene.add(player); player.position.set(0,0,2);
 const fallback = new THREE.Mesh(new THREE.ConeGeometry(1.15,3.4,5),new THREE.MeshStandardMaterial({color:0x0c2731,emissive:0x00a8b8,emissiveIntensity:.55,metalness:.9,roughness:.2})); fallback.rotation.x=Math.PI/2; player.add(fallback);
-new GLTFLoader().load('/assets/vi3w-hover-racer.glb', gltf=>{
+new GLTFLoader().load('./assets/vi3w-hover-racer.glb', gltf=>{
   player.remove(fallback); const model=gltf.scene; const box=new THREE.Box3().setFromObject(model); const size=box.getSize(new THREE.Vector3()); const s=3.2/Math.max(size.x,size.y,size.z); model.scale.setScalar(s); box.setFromObject(model); model.position.sub(box.getCenter(new THREE.Vector3())); model.rotation.y=Math.PI; model.position.y=.1; player.add(model);
 }, undefined, ()=>{});
 
