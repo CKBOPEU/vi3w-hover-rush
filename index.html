@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#05080f" />
+    <title>Vi3W Hover Rush</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main id="game" aria-label="Vi3W Hover Rush game">
+      <canvas id="scene"></canvas>
+      <section class="hud" aria-live="polite">
+        <div><span>Score</span><strong id="score">0000</strong></div>
+        <div><span>Energy</span><strong id="energy">100%</strong></div>
+        <div><span>Speed</span><strong id="speed">0</strong></div>
+      </section>
+      <div class="brand">VI3W <b>//</b> HOVER RUSH</div>
+      <section id="intro" class="panel">
+        <p class="eyebrow">Playable prototype · asset generated with Vi3W</p>
+        <h1>Hover Rush</h1>
+        <p>Thread the neon gates, collect energy cores, and survive the accelerating circuit.</p>
+        <div class="controls"><span>Mouse / touch</span><span>Steer</span><span>Space</span><span>Boost</span></div>
+        <button id="start">Start run</button>
+      </section>
+      <section id="gameover" class="panel hidden">
+        <p class="eyebrow">Run complete</p>
+        <h2 id="result">Score 0000</h2>
+        <p id="best">Best 0000</p>
+        <button id="restart">Race again</button>
+      </section>
+      <div class="mobile-controls" aria-label="Touch controls">
+        <button data-control="left" aria-label="Move left">←</button>
+        <button data-control="boost" aria-label="Boost">⚡</button>
+        <button data-control="right" aria-label="Move right">→</button>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
